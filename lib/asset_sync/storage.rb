@@ -2,7 +2,7 @@ require "fog/core"
 
 module AssetSync
   class Storage
-    REGEXP_FINGERPRINTED_FILES = /^(.*)\/([^-]+)-[^\.]+\.([^\.]+)$/
+    REGEXP_FINGERPRINTED_FILES = /^(.*)\/([^\/]+)-[0-9a-fA-F]{32,}\.([^\.]+)$/
 
     class BucketNotFound < StandardError;
     end
